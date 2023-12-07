@@ -1,6 +1,6 @@
 import { AssetListProps } from "@/types/components/assetList";
 import AssetCard from "../assetCard";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const AssetList = (props: AssetListProps) => {
   const { data } = props;
@@ -38,4 +38,4 @@ const AssetList = (props: AssetListProps) => {
     </div>
   );
 };
-export default AssetList;
+export default memo(AssetList);
