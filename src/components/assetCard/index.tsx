@@ -1,5 +1,6 @@
 import { AssetCardProps } from "@/types/components/assetCard";
 import Image from "next/image";
+import { memo } from "react";
 
 const AssetCard = (props: AssetCardProps) => {
   const { data } = props;
@@ -21,4 +22,4 @@ const AssetCard = (props: AssetCardProps) => {
   );
 };
 
-export default AssetCard;
+export default memo(AssetCard);
