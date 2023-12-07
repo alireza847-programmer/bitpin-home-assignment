@@ -3,6 +3,7 @@ import AssetList from "@/components/assetList";
 import { GET_MARKETS_API_URL, MarketsResponseDto } from "@/types/api/markets";
 import { WEB_SOCKET_URL } from "@/types/api/socket";
 import { useEffect, useState } from "react";
+// i use react-api-wrapper-hook because its written by me and i want to show my skills you can see this package details in npm
 import { useApi } from "react-api-wrapper-hook";
 import useWebSocket, { ReadyState } from "react-use-websocket";
 
