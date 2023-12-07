@@ -15,22 +15,22 @@ const AssetList = (props: AssetListProps) => {
     }
   };
   const onNext = () => {
-    if (data?.results.slice(10 * page, 10 * (page + 1)).length !== 0) {
-      setPage((page) => page + 1);
-    }
+    setPage((page) => page + 1);
   };
   const onPrev = () => {
-    if (data?.results.slice(10 * (page - 2), 10 * (page - 1)).length !== 0) {
-      setPage((page) => page - 1);
-    }
+    setPage((page) => page - 1);
   };
   return (
     <div className="flex flex-col gap-2 w-full">
       <div className="flex w-full justify-between">
-        <button onClick={onNext} className="bg-black">
+        <button
+          disabled={!(data && 10 * page < data.results.length)}
+          onClick={onNext}
+          className="bg-black"
+        >
           Next
         </button>
-        <button onClick={onPrev} className="bg-black">
+        <button disabled={!(page !== 1)} onClick={onPrev} className="bg-black">
           Prev
         </button>
       </div>
